@@ -1,487 +1,438 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Herbario - Dầu Gội Thảo Mộc</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, sans-serif;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body{
-      background:#f7f6f2;
-      color:#2d2d2d;
-      line-height:1.6;
-    }
+  <title>HERBARIO - Dầu Gội Thảo Mộc</title>
 
-    img{
-      width:100%;
-      display:block;
-    }
+  <link rel="stylesheet" href="style.css">
 
-    section{
-      padding:60px 20px;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    .container{
-      max-width:1200px;
-      margin:auto;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-    h1,h2,h3{
-      margin-bottom:20px;
-    }
-
-    .btn{
-      display:inline-block;
-      background:#4d7c3d;
-      color:white;
-      padding:14px 28px;
-      border-radius:40px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      background:#355828;
-    }
-
-    /* HERO */
-
-    .hero{
-      background:linear-gradient(to right,#4b2e1f,#6f8f52);
-      color:white;
-      padding:80px 20px;
-    }
-
-    .hero-flex{
-      display:flex;
-      align-items:center;
-      gap:40px;
-      flex-wrap:wrap;
-    }
-
-    .hero-text{
-      flex:1;
-    }
-
-    .hero-img{
-      flex:1;
-    }
-
-    .hero h1{
-      font-size:48px;
-      line-height:1.2;
-    }
-
-    .hero p{
-      margin:20px 0;
-      font-size:18px;
-    }
-
-    /* PROBLEM */
-
-    .problem{
-      background:#fff;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .card{
-      background:#f1efe7;
-      padding:25px;
-      border-radius:20px;
-      text-align:center;
-    }
-
-    /* SOLUTION */
-
-    .solution{
-      background:#eef4e7;
-    }
-
-    .solution-flex{
-      display:flex;
-      gap:40px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-
-    .solution ul{
-      margin-top:20px;
-      padding-left:20px;
-    }
-
-    /* SOCIAL PROOF */
-
-    .review-box{
-      background:white;
-      padding:25px;
-      border-radius:20px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .stars{
-      color:gold;
-      margin-bottom:10px;
-    }
-
-    .proof-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
-
-    /* CERTIFICATE */
-
-    .badges{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-      margin-top:30px;
-    }
-
-    .badge{
-      background:#fff;
-      padding:20px;
-      border-radius:20px;
-      flex:1;
-      min-width:220px;
-      text-align:center;
-    }
-
-    /* BEFORE AFTER */
-
-    .before-after{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
-
-    /* FAQ */
-
-    .faq-item{
-      background:white;
-      margin-bottom:15px;
-      border-radius:15px;
-      padding:20px;
-    }
-
-    /* FORM */
-
-    form{
-      background:white;
-      padding:30px;
-      border-radius:20px;
-      margin-top:30px;
-    }
-
-    input, textarea{
-      width:100%;
-      padding:15px;
-      margin-bottom:15px;
-      border-radius:10px;
-      border:1px solid #ccc;
-    }
-
-    button{
-      border:none;
-      cursor:pointer;
-    }
-
-    /* FOOTER */
-
-    footer{
-      background:#4b2e1f;
-      color:white;
-      text-align:center;
-      padding:20px;
-    }
-
-    /* CHAT AI */
-
-    .chatbox{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      width:320px;
-      background:white;
-      border-radius:20px;
-      overflow:hidden;
-      box-shadow:0 5px 20px rgba(0,0,0,0.2);
-      z-index:999;
-    }
-
-    .chat-header{
-      background:#4d7c3d;
-      color:white;
-      padding:15px;
-      font-weight:bold;
-    }
-
-    .chat-body{
-      padding:15px;
-      height:250px;
-      overflow-y:auto;
-      font-size:14px;
-    }
-
-    .chat-input{
-      display:flex;
-      border-top:1px solid #ddd;
-    }
-
-    .chat-input input{
-      border:none;
-      margin:0;
-      border-radius:0;
-    }
-
-    .chat-input button{
-      background:#4d7c3d;
-      color:white;
-      padding:15px;
-    }
-
-    .message{
-      margin-bottom:12px;
-    }
-
-    .bot{
-      color:#355828;
-      font-weight:bold;
-    }
-
-    /* MOBILE */
-
-    @media(max-width:768px){
-
-      .hero h1{
-        font-size:34px;
-      }
-
-      .hero-flex{
-        flex-direction:column;
-      }
-
-      .solution-flex{
-        flex-direction:column;
-      }
-
-      .chatbox{
-        width:90%;
-        right:5%;
-      }
-
-    }
-
-  </style>
 </head>
 
 <body>
 
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <div class="logo">
+      HERBARIO
+    </div>
+
+    <nav>
+
+      <a href="#problem">Vấn đề</a>
+
+      <a href="#solution">Giải pháp</a>
+
+      <a href="#ingredients">Thành phần</a>
+
+      <a href="#reviews">Đánh giá</a>
+
+      <a href="#faq">FAQ</a>
+
+    </nav>
+
+    <a href="#order" class="btn-primary">
+      MUA NGAY
+    </a>
+
+  </header>
+
   <!-- HERO -->
 
   <section class="hero">
-    <div class="container hero-flex">
 
-      <div class="hero-text">
-        <h1>Phục Hồi Tóc Hư Tổn Từ Gốc Với Dầu Gội Thảo Mộc HERBARIO</h1>
+    <div class="hero-left">
 
-        <p>
-          Công thức thuần chay từ bồ kết, hà thủ ô và tinh dầu thiên nhiên giúp giảm gãy rụng, sạch gàu và nuôi dưỡng tóc chắc khỏe.
-        </p>
+      <span class="tag">
+        🌿 DẦU GỘI THẢO MỘC THUẦN CHAY
+      </span>
 
-        <a href="#order" class="btn">
+      <h1>
+        Tóc Chắc Khỏe <br>
+        Giảm Gãy Rụng <br>
+        Sau 14 Ngày
+      </h1>
+
+      <p>
+        HERBARIO kết hợp bồ kết, hà thủ ô và tinh dầu bưởi
+        giúp giảm gàu, phục hồi tóc hư tổn và nuôi dưỡng tóc mềm mượt tự nhiên.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#order" class="btn-primary">
           ĐẶT HÀNG NGAY
         </a>
 
-        <p style="margin-top:20px;">
-          ⭐ 4.9/5 | 12.500+ khách hàng yêu thích
-        </p>
+        <a href="#reviews" class="btn-outline">
+          XEM ĐÁNH GIÁ
+        </a>
+
       </div>
 
-      <div class="hero-img">
-        <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=1200&auto=format&fit=crop" alt="">
+      <div class="hero-stats">
+
+        <div>
+          <h3>12K+</h3>
+          <span>Khách hàng</span>
+        </div>
+
+        <div>
+          <h3>4.9★</h3>
+          <span>Đánh giá</span>
+        </div>
+
+        <div>
+          <h3>100%</h3>
+          <span>Thuần chay</span>
+        </div>
+
       </div>
 
     </div>
+
+    <div class="hero-right">
+
+      <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
   </section>
 
   <!-- PROBLEM -->
 
-  <section class="problem">
-    <div class="container">
+  <section class="problem" id="problem">
 
-      <h2>Tóc Bạn Đang Gặp Những Vấn Đề Này?</h2>
+    <div class="section-title">
 
-      <div class="cards">
+      <span>VẤN ĐỀ</span>
 
-        <div class="card">
-          <h3>Rụng tóc nhiều</h3>
-          <p>Tóc yếu, dễ gãy sau khi gội.</p>
-        </div>
+      <h2>
+        Mái Tóc Của Bạn Đang Gặp Tình Trạng Này?
+      </h2>
 
-        <div class="card">
-          <h3>Da đầu nhiều gàu</h3>
-          <p>Ngứa và mất tự tin mỗi ngày.</p>
-        </div>
+    </div>
 
-        <div class="card">
-          <h3>Tóc khô xơ</h3>
-          <p>Thiếu sức sống do hóa chất.</p>
-        </div>
+    <div class="problem-grid">
+
+      <div class="card">
+
+        <h3>Rụng tóc nhiều</h3>
+
+        <p>
+          Tóc yếu và dễ gãy rụng mỗi lần gội đầu.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Da đầu nhiều gàu</h3>
+
+        <p>
+          Ngứa ngáy và thiếu tự tin khi giao tiếp.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Tóc khô xơ</h3>
+
+        <p>
+          Hư tổn do hóa chất và nhiệt độ cao.
+        </p>
 
       </div>
 
     </div>
+
   </section>
 
   <!-- SOLUTION -->
 
-  <section class="solution">
-    <div class="container solution-flex">
+  <section class="solution" id="solution">
 
-      <div style="flex:1;">
-        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop" alt="">
-      </div>
+    <div class="solution-image">
 
-      <div style="flex:1;">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
 
-        <h2>Giải Pháp Thảo Mộc An Toàn Cho Mái Tóc</h2>
+    </div>
 
-        <p>
-          HERBARIO kết hợp các thành phần thiên nhiên giúp làm sạch nhẹ dịu và phục hồi tóc từ sâu bên trong.
-        </p>
+    <div class="solution-content">
 
-        <ul>
-          <li>Bồ kết giúp tóc đen mượt tự nhiên</li>
-          <li>Hà thủ ô hỗ trợ giảm rụng tóc</li>
-          <li>Tinh dầu bưởi kích thích mọc tóc</li>
-          <li>Không sulfate - không paraben</li>
-        </ul>
+      <span>GIẢI PHÁP</span>
+
+      <h2>
+        Công Thức Thảo Mộc Dịu Nhẹ
+        Cho Mái Tóc Khỏe Từ Gốc
+      </h2>
+
+      <div class="feature-box">
+
+        <div class="feature">
+          🌿 Làm sạch tóc dịu nhẹ
+        </div>
+
+        <div class="feature">
+          ✨ Giảm gàu và ngứa da đầu
+        </div>
+
+        <div class="feature">
+          🍊 Hỗ trợ kích thích mọc tóc
+        </div>
+
+        <div class="feature">
+          💚 Không sulfate - không paraben
+        </div>
 
       </div>
 
     </div>
+
+  </section>
+
+  <!-- INGREDIENTS -->
+
+  <section class="ingredients" id="ingredients">
+
+    <div class="section-title">
+
+      <span>THÀNH PHẦN</span>
+
+      <h2>
+        Tinh Chất Thiên Nhiên An Toàn
+      </h2>
+
+    </div>
+
+    <div class="ingredient-grid">
+
+      <div class="ingredient-card">
+
+        <h3>Bồ Kết</h3>
+
+        <p>
+          Làm sạch tóc tự nhiên và giúp tóc đen mượt.
+        </p>
+
+      </div>
+
+      <div class="ingredient-card">
+
+        <h3>Hà Thủ Ô</h3>
+
+        <p>
+          Giảm gãy rụng và hỗ trợ phục hồi tóc yếu.
+        </p>
+
+      </div>
+
+      <div class="ingredient-card">
+
+        <h3>Tinh Dầu Bưởi</h3>
+
+        <p>
+          Kích thích mọc tóc và nuôi dưỡng chân tóc.
+        </p>
+
+      </div>
+
+    </div>
+
   </section>
 
   <!-- SOCIAL PROOF -->
 
-  <section>
-    <div class="container">
+  <section class="reviews" id="reviews">
 
-      <h2>Khách Hàng Nói Gì Về HERBARIO?</h2>
+    <div class="section-title">
 
-      <div class="proof-grid">
+      <span>ĐÁNH GIÁ</span>
 
-        <div class="review-box">
-          <div class="stars">★★★★★</div>
-          <p>
-            “Sau 3 tuần tóc mình giảm rụng rõ rệt và mềm hơn rất nhiều.”
-          </p>
-          <strong>- Minh Anh</strong>
+      <h2>
+        Hơn 12.000 Khách Hàng Tin Dùng
+      </h2>
+
+    </div>
+
+    <div class="review-grid">
+
+      <div class="review-card">
+
+        <div class="stars">
+          ★★★★★
         </div>
 
-        <div class="review-box">
-          <div class="stars">★★★★★</div>
-          <p>
-            “Mùi thơm thảo mộc rất dễ chịu, da đầu sạch mà không khô.”
-          </p>
-          <strong>- Khánh Ly</strong>
-        </div>
+        <p>
+          “Sau 2 tuần tóc mình giảm rụng rõ rệt
+          và mềm hơn rất nhiều.”
+        </p>
 
-        <div class="review-box">
-          <div class="stars">★★★★★</div>
-          <p>
-            “Dùng ổn hơn nhiều loại dầu gội hóa chất trước đây.”
-          </p>
-          <strong>- Thanh Tùng</strong>
-        </div>
+        <h4>Ngọc Anh</h4>
 
       </div>
 
-      <div class="badges">
+      <div class="review-card">
 
-        <div class="badge">
-          🌿 Chứng nhận Thuần Chay
+        <div class="stars">
+          ★★★★★
         </div>
 
-        <div class="badge">
-          ✅ Cam kết hoàn tiền nếu không hài lòng
+        <p>
+          “Mùi thảo mộc cực dễ chịu,
+          da đầu sạch mà không khô.”
+        </p>
+
+        <h4>Minh Thư</h4>
+
+      </div>
+
+      <div class="review-card">
+
+        <div class="stars">
+          ★★★★★
         </div>
 
-        <div class="badge">
-          🚚 Miễn phí vận chuyển toàn quốc
-        </div>
+        <p>
+          “Dùng tốt hơn nhiều loại dầu gội hóa chất trước đây.”
+        </p>
+
+        <h4>Khánh Ly</h4>
 
       </div>
 
     </div>
+
+    <div class="trust-box">
+
+      <div class="trust-item">
+        🌿 Chứng nhận Thuần Chay
+      </div>
+
+      <div class="trust-item">
+        ✅ Cam kết hoàn tiền
+      </div>
+
+      <div class="trust-item">
+        🚚 Miễn phí vận chuyển
+      </div>
+
+    </div>
+
   </section>
 
   <!-- BEFORE AFTER -->
 
-  <section>
-    <div class="container">
+  <section class="before-after">
 
-      <h2>Kết Quả Sau Khi Trải Nghiệm</h2>
+    <div class="section-title">
 
-      <div class="before-after">
+      <span>KẾT QUẢ</span>
+
+      <h2>
+        Trước Và Sau Khi Sử Dụng
+      </h2>
+
+    </div>
+
+    <div class="before-grid">
+
+      <div class="before-card">
 
         <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
 
+        <h3>Trước Khi Dùng</h3>
+
+      </div>
+
+      <div class="before-card">
+
         <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop">
+
+        <h3>Sau 14 Ngày</h3>
 
       </div>
 
     </div>
+
   </section>
 
   <!-- FAQ -->
 
-  <section style="background:#eef4e7;">
-    <div class="container">
+  <section class="faq" id="faq">
 
-      <h2>Câu Hỏi Thường Gặp</h2>
+    <div class="section-title">
+
+      <span>FAQ</span>
+
+      <h2>
+        Câu Hỏi Thường Gặp
+      </h2>
+
+    </div>
+
+    <div class="faq-box">
 
       <div class="faq-item">
-        <h3>Dầu gội phù hợp cho tóc nhuộm không?</h3>
-        <p>Có. Thành phần dịu nhẹ phù hợp cả tóc nhuộm và tóc yếu.</p>
+
+        <h3>
+          Dầu gội có phù hợp tóc nhuộm không?
+        </h3>
+
+        <p>
+          Có. HERBARIO phù hợp cho tóc nhuộm và tóc yếu.
+        </p>
+
       </div>
 
       <div class="faq-item">
-        <h3>Bao lâu có hiệu quả?</h3>
-        <p>Thông thường từ 2-4 tuần tùy tình trạng tóc.</p>
+
+        <h3>
+          Bao lâu có hiệu quả?
+        </h3>
+
+        <p>
+          Khoảng 2-4 tuần tùy tình trạng tóc.
+        </p>
+
       </div>
 
       <div class="faq-item">
-        <h3>Có gây bết tóc không?</h3>
-        <p>Không. HERBARIO làm sạch dịu nhẹ và giữ tóc mềm tự nhiên.</p>
+
+        <h3>
+          Có gây bết tóc không?
+        </h3>
+
+        <p>
+          Không. Công thức giúp tóc sạch và mềm tự nhiên.
+        </p>
+
       </div>
 
     </div>
+
   </section>
 
-  <!-- CTA + FORM -->
+  <!-- CTA -->
 
-  <section id="order">
-    <div class="container">
+  <section class="cta" id="order">
 
-      <h2>Đặt Hàng Ngay Hôm Nay</h2>
+    <div class="cta-container">
+
+      <h2>
+        Đặt Hàng HERBARIO Ngay Hôm Nay
+      </h2>
 
       <p>
         Nhận ưu đãi giảm 20% cho 100 khách hàng đầu tiên.
@@ -497,24 +448,19 @@
 
         <textarea placeholder="Ghi chú thêm"></textarea>
 
-        <button class="btn">
+        <button type="submit" class="btn-primary">
           XÁC NHẬN ĐẶT HÀNG
         </button>
 
       </form>
 
     </div>
+
   </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-    © 2026 HERBARIO - Dầu Gội Thảo Mộc Thiên Nhiên
-  </footer>
 
   <!-- CHAT AI -->
 
-  <div class="chatbox">
+  <div class="chat-widget">
 
     <div class="chat-header">
       Tư vấn AI 24/7
@@ -522,8 +468,7 @@
 
     <div class="chat-body" id="chatBody">
 
-      <div class="message">
-        <span class="bot">AI:</span>
+      <div class="bot-message">
         Xin chào 👋 Tôi có thể hỗ trợ về giá, công dụng và cách đặt hàng.
       </div>
 
@@ -541,53 +486,16 @@
 
   </div>
 
-  <script>
+  <!-- FOOTER -->
 
-    function sendMessage(){
+  <footer>
 
-      let input = document.getElementById("userInput");
-      let chatBody = document.getElementById("chatBody");
+    © 2026 HERBARIO - Dầu Gội Thảo Mộc
 
-      let text = input.value.toLowerCase();
+  </footer>
 
-      if(text.trim() === "") return;
-
-      chatBody.innerHTML += `
-        <div class="message">
-          <strong>Bạn:</strong> ${text}
-        </div>
-      `;
-
-      let reply = "Xin vui lòng để lại thông tin để HERBARIO hỗ trợ bạn tốt hơn 🌿";
-
-      if(text.includes("giá")){
-        reply = "HERBARIO hiện có giá ưu đãi 299.000đ/chai.";
-      }
-
-      else if(text.includes("công dụng")){
-        reply = "HERBARIO giúp giảm gãy rụng, sạch gàu và phục hồi tóc hư tổn.";
-      }
-
-      else if(text.includes("đặt hàng")){
-        reply = "Bạn chỉ cần điền form bên dưới và nhấn xác nhận đặt hàng.";
-      }
-
-      else if(text.includes("ship")){
-        reply = "HERBARIO hỗ trợ giao hàng toàn quốc.";
-      }
-
-      chatBody.innerHTML += `
-        <div class="message">
-          <span class="bot">AI:</span> ${reply}
-        </div>
-      `;
-
-      input.value = "";
-
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }
-
-  </script>
+  <script src="script.js"></script>
 
 </body>
+
 </html>
