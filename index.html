@@ -4,6 +4,7 @@
 <head>
 
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>HERBARIO - Dầu Gội Thảo Mộc</title>
@@ -19,6 +20,11 @@
 
 <body>
 
+  <!-- BACKGROUND GLOW -->
+
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
   <!-- NAVBAR -->
 
   <header class="navbar">
@@ -33,9 +39,9 @@
 
       <a href="#solution">Giải pháp</a>
 
-      <a href="#ingredients">Thành phần</a>
+      <a href="#ingredient">Thành phần</a>
 
-      <a href="#reviews">Đánh giá</a>
+      <a href="#review">Đánh giá</a>
 
       <a href="#faq">FAQ</a>
 
@@ -53,19 +59,18 @@
 
     <div class="hero-left">
 
-      <span class="tag">
+      <div class="hero-badge">
         🌿 DẦU GỘI THẢO MỘC THUẦN CHAY
-      </span>
+      </div>
 
       <h1>
-        Tóc Chắc Khỏe <br>
-        Giảm Gãy Rụng <br>
-        Sau 14 Ngày
+        Mái Tóc Chắc Khỏe <br>
+        Từ Gốc Với HERBARIO
       </h1>
 
       <p>
-        HERBARIO kết hợp bồ kết, hà thủ ô và tinh dầu bưởi
-        giúp giảm gàu, phục hồi tóc hư tổn và nuôi dưỡng tóc mềm mượt tự nhiên.
+        Giảm gãy rụng, sạch gàu và phục hồi tóc hư tổn
+        bằng công thức thiên nhiên từ bồ kết, hà thủ ô và tinh dầu bưởi.
       </p>
 
       <div class="hero-buttons">
@@ -74,7 +79,7 @@
           ĐẶT HÀNG NGAY
         </a>
 
-        <a href="#reviews" class="btn-outline">
+        <a href="#review" class="btn-secondary">
           XEM ĐÁNH GIÁ
         </a>
 
@@ -82,17 +87,17 @@
 
       <div class="hero-stats">
 
-        <div>
+        <div class="stat-card">
           <h3>12K+</h3>
           <span>Khách hàng</span>
         </div>
 
-        <div>
+        <div class="stat-card">
           <h3>4.9★</h3>
           <span>Đánh giá</span>
         </div>
 
-        <div>
+        <div class="stat-card">
           <h3>100%</h3>
           <span>Thuần chay</span>
         </div>
@@ -103,7 +108,12 @@
 
     <div class="hero-right">
 
-      <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=1200&auto=format&fit=crop">
+      <div class="floating-card">
+        🌿 Bestseller 2026
+      </div>
+
+      <img class="product-image"
+        src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=1200&auto=format&fit=crop">
 
     </div>
 
@@ -113,44 +123,44 @@
 
   <section class="problem" id="problem">
 
-    <div class="section-title">
+    <div class="section-top">
 
       <span>VẤN ĐỀ</span>
 
       <h2>
-        Mái Tóc Của Bạn Đang Gặp Tình Trạng Này?
+        Những Điều Khiến Mái Tóc Bạn Yếu Dần
       </h2>
 
     </div>
 
     <div class="problem-grid">
 
-      <div class="card">
+      <div class="glass-card">
 
         <h3>Rụng tóc nhiều</h3>
 
         <p>
-          Tóc yếu và dễ gãy rụng mỗi lần gội đầu.
+          Tóc yếu và dễ gãy rụng sau mỗi lần gội.
         </p>
 
       </div>
 
-      <div class="card">
+      <div class="glass-card">
 
         <h3>Da đầu nhiều gàu</h3>
 
         <p>
-          Ngứa ngáy và thiếu tự tin khi giao tiếp.
+          Gây ngứa ngáy và mất tự tin.
         </p>
 
       </div>
 
-      <div class="card">
+      <div class="glass-card">
 
         <h3>Tóc khô xơ</h3>
 
         <p>
-          Hư tổn do hóa chất và nhiệt độ cao.
+          Hư tổn do nhiệt và hóa chất.
         </p>
 
       </div>
@@ -165,7 +175,8 @@
 
     <div class="solution-image">
 
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
+      <img
+        src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
 
     </div>
 
@@ -174,25 +185,25 @@
       <span>GIẢI PHÁP</span>
 
       <h2>
-        Công Thức Thảo Mộc Dịu Nhẹ
-        Cho Mái Tóc Khỏe Từ Gốc
+        Công Thức Dịu Nhẹ <br>
+        Cho Mái Tóc Khỏe Tự Nhiên
       </h2>
 
-      <div class="feature-box">
+      <div class="feature-list">
 
-        <div class="feature">
+        <div class="feature-card">
           🌿 Làm sạch tóc dịu nhẹ
         </div>
 
-        <div class="feature">
-          ✨ Giảm gàu và ngứa da đầu
-        </div>
-
-        <div class="feature">
+        <div class="feature-card">
           🍊 Hỗ trợ kích thích mọc tóc
         </div>
 
-        <div class="feature">
+        <div class="feature-card">
+          ✨ Giảm gàu và ngứa da đầu
+        </div>
+
+        <div class="feature-card">
           💚 Không sulfate - không paraben
         </div>
 
@@ -202,16 +213,16 @@
 
   </section>
 
-  <!-- INGREDIENTS -->
+  <!-- INGREDIENT -->
 
-  <section class="ingredients" id="ingredients">
+  <section class="ingredient" id="ingredient">
 
-    <div class="section-title">
+    <div class="section-top">
 
       <span>THÀNH PHẦN</span>
 
       <h2>
-        Tinh Chất Thiên Nhiên An Toàn
+        Tinh Chất Thiên Nhiên Cao Cấp
       </h2>
 
     </div>
@@ -223,7 +234,7 @@
         <h3>Bồ Kết</h3>
 
         <p>
-          Làm sạch tóc tự nhiên và giúp tóc đen mượt.
+          Giúp tóc đen mượt và sạch tự nhiên.
         </p>
 
       </div>
@@ -233,7 +244,7 @@
         <h3>Hà Thủ Ô</h3>
 
         <p>
-          Giảm gãy rụng và hỗ trợ phục hồi tóc yếu.
+          Hỗ trợ phục hồi tóc yếu và giảm gãy rụng.
         </p>
 
       </div>
@@ -252,16 +263,16 @@
 
   </section>
 
-  <!-- SOCIAL PROOF -->
+  <!-- REVIEW -->
 
-  <section class="reviews" id="reviews">
+  <section class="review" id="review">
 
-    <div class="section-title">
+    <div class="section-top">
 
       <span>ĐÁNH GIÁ</span>
 
       <h2>
-        Hơn 12.000 Khách Hàng Tin Dùng
+        Hơn 12.000 Người Tin Dùng HERBARIO
       </h2>
 
     </div>
@@ -275,8 +286,7 @@
         </div>
 
         <p>
-          “Sau 2 tuần tóc mình giảm rụng rõ rệt
-          và mềm hơn rất nhiều.”
+          “Sau 2 tuần tóc mình giảm rụng rõ rệt.”
         </p>
 
         <h4>Ngọc Anh</h4>
@@ -290,8 +300,7 @@
         </div>
 
         <p>
-          “Mùi thảo mộc cực dễ chịu,
-          da đầu sạch mà không khô.”
+          “Da đầu sạch mà không bị khô tóc.”
         </p>
 
         <h4>Minh Thư</h4>
@@ -305,7 +314,7 @@
         </div>
 
         <p>
-          “Dùng tốt hơn nhiều loại dầu gội hóa chất trước đây.”
+          “Mùi thảo mộc cực kỳ dễ chịu.”
         </p>
 
         <h4>Khánh Ly</h4>
@@ -314,18 +323,18 @@
 
     </div>
 
-    <div class="trust-box">
+    <div class="trust-wrapper">
 
-      <div class="trust-item">
+      <div class="trust-card">
         🌿 Chứng nhận Thuần Chay
       </div>
 
-      <div class="trust-item">
+      <div class="trust-card">
         ✅ Cam kết hoàn tiền
       </div>
 
-      <div class="trust-item">
-        🚚 Miễn phí vận chuyển
+      <div class="trust-card">
+        🚚 Giao hàng toàn quốc
       </div>
 
     </div>
@@ -336,12 +345,12 @@
 
   <section class="before-after">
 
-    <div class="section-title">
+    <div class="section-top">
 
       <span>KẾT QUẢ</span>
 
       <h2>
-        Trước Và Sau Khi Sử Dụng
+        Trước Và Sau Khi Trải Nghiệm
       </h2>
 
     </div>
@@ -350,7 +359,8 @@
 
       <div class="before-card">
 
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+        <img
+          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
 
         <h3>Trước Khi Dùng</h3>
 
@@ -358,7 +368,8 @@
 
       <div class="before-card">
 
-        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop">
+        <img
+          src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop">
 
         <h3>Sau 14 Ngày</h3>
 
@@ -372,7 +383,7 @@
 
   <section class="faq" id="faq">
 
-    <div class="section-title">
+    <div class="section-top">
 
       <span>FAQ</span>
 
@@ -415,7 +426,7 @@
         </h3>
 
         <p>
-          Không. Công thức giúp tóc sạch và mềm tự nhiên.
+          Không. Công thức giúp tóc sạch nhưng vẫn mềm tự nhiên.
         </p>
 
       </div>
@@ -428,14 +439,14 @@
 
   <section class="cta" id="order">
 
-    <div class="cta-container">
+    <div class="cta-box">
 
       <h2>
         Đặt Hàng HERBARIO Ngay Hôm Nay
       </h2>
 
       <p>
-        Nhận ưu đãi giảm 20% cho 100 khách hàng đầu tiên.
+        Giảm ngay 20% cho 100 khách hàng đầu tiên.
       </p>
 
       <form action="thankyou.html">
@@ -458,12 +469,12 @@
 
   </section>
 
-  <!-- CHAT AI -->
+  <!-- CHATBOT -->
 
   <div class="chat-widget">
 
     <div class="chat-header">
-      Tư vấn AI 24/7
+      AI Tư Vấn 24/7
     </div>
 
     <div class="chat-body" id="chatBody">
@@ -485,8 +496,6 @@
     </div>
 
   </div>
-
-  <!-- FOOTER -->
 
   <footer>
 
