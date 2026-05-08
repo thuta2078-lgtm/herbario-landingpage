@@ -472,30 +472,30 @@
   <!-- CHATBOT -->
 
   <div class="chat-widget">
-
-    <div class="chat-header">
-      AI Tư Vấn 24/7
+<div id="aiChatWindow" class="chat-container">
+    <div id="aiChatHeader" class="chat-header">
+        <span>🌿 Herbario Trợ Lý AI</span>
+        <button onclick="toggleAIChat()" style="color:white">✕</button>
     </div>
-
-    <div class="chat-body" id="chatBody">
-
-      <div class="bot-message">
-        Xin chào 👋 Tôi có thể hỗ trợ về giá, công dụng và cách đặt hàng.
-      </div>
-
+    <div id="aiChatMessages" class="chat-body">
+        <div class="bot-message">Xin chào! Herbario có thể giúp gì cho mái tóc của bạn hôm nay?</div>
+    </div>
+    
+    <div id="aiChatOptions" style="padding: 10px; display: flex; gap: 5px; flex-wrap: wrap; background: #f9f9f9;">
+        <button onclick="sendQuickOption('Giải pháp mọc tóc')" style="font-size: 12px; background: #fff; border: 1px solid #2D4F1E; border-radius: 15px; padding: 5px 10px; cursor: pointer;">Giải pháp mọc tóc</button>
+        <button onclick="sendQuickOption('Combo ưu đãi')" style="font-size: 12px; background: #fff; border: 1px solid #2D4F1E; border-radius: 15px; padding: 5px 10px; cursor: pointer;">Combo ưu đãi</button>
+        <button onclick="sendQuickOption('Tư vấn da đầu')" style="font-size: 12px; background: #fff; border: 1px solid #2D4F1E; border-radius: 15px; padding: 5px 10px; cursor: pointer;">Tư vấn da đầu</button>
     </div>
 
     <div class="chat-input">
-
-      <input type="text" id="userInput" placeholder="Nhập câu hỏi...">
-
-      <button onclick="sendMessage()">
-        Gửi
-      </button>
-
+        <input type="text" id="userInput" placeholder="Nhập câu hỏi...">
+        <button onclick="sendMessage()">Gửi</button>
     </div>
+</div>
 
-  </div>
+<div id="aiChatButton" onclick="toggleAIChat()" style="position: fixed; bottom: 20px; right: 20px; background: #2D4F1E; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+    💬
+</div>
 
   <footer>
 
