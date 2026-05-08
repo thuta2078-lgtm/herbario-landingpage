@@ -1,55 +1,29 @@
-function sendMessage(){
+// Hàm ẩn/hiện cửa sổ chat
+function toggleAIChat() {
+    const chatWin = document.getElementById('aiChatWindow');
+    chatWin.style.display = (chatWin.style.display === 'none' || chatWin.style.display === '') ? 'flex' : 'none';
+}
 
-  let input = document.getElementById("userInput");
+// Hàm xử lý khi bấm nút lựa chọn nhanh
+function sendQuickOption(optionText) {
+    appendMessage(optionText, 'user-message');
+    
+    // AI phản hồi tự động dựa trên nút bấm
+    setTimeout(() => {
+        let botResponse = "Cảm ơn bạn đã quan tâm! ";
+        if(optionText === 'Giải pháp mọc tóc') botResponse += "Herbario có tinh chất vỏ bưởi đậm đặc giúp kích thích mọc tóc sau 14 ngày dùng.";
+        if(optionText === 'Combo ưu đãi') botResponse += "Hiện combo gội xả bưởi đang giảm giá 30% cho khách hàng mới đó ạ.";
+        if(optionText === 'Tư vấn da đầu') botResponse += "Bạn vui lòng để lại số điện thoại, chuyên gia sẽ gọi tư vấn tình trạng da đầu cho bạn nhé.";
+        
+        appendMessage(botResponse, 'bot-message');
+    }, 800);
+}
 
-  let chatBody = document.getElementById("chatBody");
-
-  let text = input.value.toLowerCase();
-
-  if(text.trim() === ""){
-    return;
-  }
-
-  chatBody.innerHTML += `
-    <div class="bot-message">
-      <strong>Bạn:</strong> ${text}
-    </div>
-  `;
-
-  let reply = "HERBARIO sẽ hỗ trợ bạn ngay 🌿";
-
-  if(text.includes("giá")){
-    reply = "HERBARIO hiện có giá ưu đãi 299.000đ/chai.";
-  }
-
-  else if(text.includes("công dụng")){
-    reply = "HERBARIO giúp giảm gãy rụng, sạch gàu và phục hồi tóc hư tổn.";
-  }
-
-  else if(text.includes("đặt hàng")){
-    reply = "Bạn chỉ cần điền form đặt hàng bên dưới.";
-  }
-
-  else if(text.includes("ship")){
-    reply = "HERBARIO hỗ trợ giao hàng toàn quốc.";
-  }
-
-  else if(text.includes("thành phần")){
-    reply = "HERBARIO gồm bồ kết, hà thủ ô và tinh dầu bưởi.";
-  }
-
-  setTimeout(() => {
-
-    chatBody.innerHTML += `
-      <div class="bot-message">
-        ${reply}
-      </div>
-    `;
-
-    chatBody.scrollTop = chatBody.scrollHeight;
-
-  }, 700);
-
-  input.value = "";
-
+// Hàm thêm tin nhắn vào màn hình
+function appendMessage(text, className) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = className;
+    msgDiv.innerText = text;
+    document.getElementById('aiChatMessages').appendChild(msgDiv);
+    document.getElementById('aiChatMessages').scrollTop = document.getElementById('aiChatMessages').scrollHeight;
 }
